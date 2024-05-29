@@ -95,12 +95,14 @@ img {
   color: #919191;
 }
 .card-body ul {
-  margin-top: 24px;
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
 }
 .card-body ul li {
   background-color: #f1f1f1;
-  display: inline;
   padding: 4px 12px;
+  margin-bottom: 0.5rem;
   margin-right: 16px;
   border-radius: 16px;
 }
