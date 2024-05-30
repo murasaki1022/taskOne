@@ -65,6 +65,11 @@ img {
   height: auto;
 }
 
+a {
+  text-decoration: none;
+  color: #000;
+}
+
 .card-container {
   display: flex;
   justify-content: center;
@@ -229,6 +234,7 @@ img {
   margin-bottom: 5rem;
   line-height: 1.5;
   padding: 4rem;
+  margin-top: 96px;
 }
 
 .banner-title {
@@ -319,5 +325,67 @@ img {
   }
   .banner-info p span:after {
     width: 20%;
+  }
+}
+.header-container {
+  width: 100%;
+  background-color: #fff;
+  height: 96px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+}
+.header-container .logo {
+  height: 40px;
+}
+
+.header-menu {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+.header-menu li:hover {
+  font-weight: bold;
+}
+
+.menu-control, .menu-btn {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .header-container {
+    justify-content: space-between;
+  }
+  .menu-btn {
+    width: 40px;
+    height: 40px;
+    margin-right: 24px;
+    display: inline;
+    cursor: pointer;
+  }
+  .menu-btn .close {
+    display: none;
+  }
+  .header-menu {
+    display: none;
+    text-align: center;
+  }
+  .menu-control:checked + .menu-btn .open {
+    display: none;
+  }
+  .menu-control:checked + .menu-btn .close {
+    display: inline;
+  }
+  .menu-control:checked ~ .header-menu {
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 2rem;
   }
 }/*# sourceMappingURL=all.css.map */
