@@ -348,8 +348,36 @@ a {
   justify-content: center;
   gap: 40px;
 }
+.header-menu li {
+  padding: 4px 8px;
+  position: relative;
+}
 .header-menu li:hover {
   font-weight: bold;
+}
+.header-menu li:hover:before, .header-menu li:hover:after {
+  position: absolute;
+  -webkit-box-reflect: below 10px;
+}
+.header-menu li:hover:before {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  top: 0;
+  right: 0;
+  border-right: 1px solid #919191;
+  border-top: 1px solid #919191;
+}
+.header-menu li:hover:after {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  top: 0;
+  left: 0;
+  border-left: 1px solid #919191;
+  border-top: 1px solid #919191;
 }
 
 .menu-control, .menu-btn {
@@ -386,6 +414,10 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
     padding-bottom: 2rem;
+  }
+  .menu-control:checked ~ .header-menu li {
+    width: 15%;
   }
 }/*# sourceMappingURL=all.css.map */

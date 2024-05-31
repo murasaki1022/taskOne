@@ -22,8 +22,47 @@
     gap: 40px;
 
     li{
+        padding: 4px 8px;
+        position: relative;
+
+
         &:hover{
             font-weight: bold;
+        
+
+        &:before,
+        &:after{
+            position: absolute;
+            -webkit-box-reflect: below 10px;
+        }
+
+
+        &:before{
+            content: "";
+            display: block;
+            width: 8px;
+            height: 8px;
+            top:0;
+            right: 0;
+            border-right: 1px solid #919191;
+            border-top: 1px solid #919191;
+        }
+
+        
+
+
+
+
+        &:after{
+            content: "";
+            display: block;
+            width: 8px;
+            height: 8px;
+            top:0;
+            left: 0;
+            border-left: 1px solid #919191;
+            border-top: 1px solid #919191;
+        }
         }
     }
 }
@@ -70,7 +109,14 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        align-items: center;
         padding-bottom: 2rem;
+        
+        li{
+            width:15%;
+        }
+
+
 
     }
 
